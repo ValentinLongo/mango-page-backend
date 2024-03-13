@@ -3,8 +3,10 @@ const axios = require('axios');
 const bodyParser = require('body-parser');
 const app = express();
 const PORT = 3000;
+const cors = require('cors');
 
 app.use(bodyParser.json());
+app.use(cors());
 
 // Ruta POST para recibir el mensaje de contacto
 app.post('/mensaje-contacto', async (req, res) => {
